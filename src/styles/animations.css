@@ -1,0 +1,23 @@
+@keyframes star-glimmer { 0%,100% { opacity: .28; transform: scale(.8); } 50% { opacity: .95; transform: scale(1.5); } }
+@keyframes ambient-rise { 0% { transform: translate3d(0,0,0) rotate(-12deg); opacity: 0; } 12% { opacity: .58; } 78% { opacity: .34; } 100% { transform: translate3d(30px,-112vh,0) rotate(18deg); opacity: 0; } }
+@keyframes status-pulse { 50% { box-shadow: 0 0 0 6px #f5a9cb12; } }
+@keyframes balloon-float { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-13px) rotate(2deg); } }
+@keyframes balloon-spark { 0% { opacity: 0; transform: rotate(var(--angle)) translateX(0) scale(.3); } 20% { opacity: 1; } 100% { opacity: 0; transform: rotate(var(--angle)) translateX(var(--distance)) scale(.1); } }
+@keyframes sorry-fall { 0% { opacity: 0; transform: translate3d(0,-5vh,0) rotate(var(--tilt)); } 7% { opacity: .76; } 82% { opacity: .66; } 100% { opacity: 0; transform: translate3d(12px,115vh,0) rotate(calc(var(--tilt) + 20deg)); } }
+@keyframes sorry-fade { 0%,70% { opacity: 1; } 100% { opacity: .18; } }
+@keyframes tear-glimmer { 0%,100% { opacity: .55; transform: translateY(0); } 48% { opacity: .9; transform: translateY(3px); } }
+@keyframes petal-drift { 0% { opacity: 0; transform: translate3d(0,-8vh,0) rotate(0deg); } 12% { opacity: .75; } 84% { opacity: .65; } 100% { opacity: 0; transform: translate3d(var(--drift),112vh,0) rotate(330deg); } }
+@keyframes petal-opacity { 0%,100% { opacity: 0; } 18%,75% { opacity: .8; } }
+@keyframes heart-glow { 0%,100% { transform: scale(1); box-shadow: 0 0 0 #f5a9cb00; } 50% { transform: scale(1.1); box-shadow: 0 0 20px #f5a9cb21; } }
+@keyframes caret-blink { 50% { opacity: 0; } }
+@keyframes cat-blink { 0%,44%,48%,100% { transform: scaleY(1); } 46% { transform: scaleY(.08); } }
+@keyframes cat-blink-sad { 0%,44%,48%,100% { transform: translateY(4px) scaleY(.75); } 46% { transform: translateY(4px) scaleY(.08); } }
+@keyframes tail-sway { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(8deg); } }
+@keyframes flower-walk { 0%,100% { transform: translateY(0) rotate(0); } 25% { transform: translateY(-3px) rotate(-.5deg); } 70% { transform: translateY(1px) rotate(.5deg); } }
+@keyframes bouquet-bloom { 0% { transform: scale(.55); opacity: .2; } 65% { transform: scale(1.07); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+
+.cat-eyes { transform-box: fill-box; transform-origin: center; animation: cat-blink 5.2s ease-in-out infinite; }
+.cat-tail { transform-box: fill-box; transform-origin: 90% 80%; animation: tail-sway 4s ease-in-out infinite; }
+.delivery-kitten { animation: flower-walk 1.25s ease-in-out 3.2s 3; }
+.cat-sad .cat-eyes { animation-name: cat-blink-sad; }
+.bouquet-art { transform-box: fill-box; transform-origin: 50% 100%; animation: bouquet-bloom .9s cubic-bezier(.2,.8,.2,1) 3.1s both; }
